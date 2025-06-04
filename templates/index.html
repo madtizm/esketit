@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8">
+  <title>{{ t('title', lang) }}</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h1>{{ t('title', lang) }}</h1>
+  <form method="post">
+    <label>{{ t('ip_address', lang) }}: <input type="text" name="ip"></label><br>
+    <label>{{ t('subnet', lang) }}: <input type="text" name="subnet"></label><br>
+    <label>{{ t('domain', lang) }}: <input type="text" name="domain"></label><br>
+    <label>{{ t('port', lang) }}: <input type="text" name="port"></label><br>
+    <button type="submit">{{ t('test', lang) }}</button>
+  </form>
+  {% if result %}<p id="result">{{ result }}</p>{% endif %}
+  <hr>
+  <p>Language:
+    <a href="?lang=en">English</a> |
+    <a href="?lang=tr">Türkçe</a> |
+    <a href="?lang=ru">Русский</a> |
+    <a href="?lang=tk">Türkmençe</a>
+  </p>
+</body>
+</html>
